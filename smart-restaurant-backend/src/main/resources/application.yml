@@ -1,0 +1,171 @@
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/smart_restaurant_db
+#    username: root
+#    password: Dhanu@396
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQLDialect
+#    show-sql: true
+#
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: dhanushtemp9@gmail.com
+#    password: adkdzjnnnnstfkox
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#            required: true
+#      transport:
+#        protocol: smtp
+#
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+#
+#  # NEW: Spring AI Ollama config
+#  ai:
+#    ollama:
+#      base-url: http://localhost:11434
+#      chat:
+#        options:
+#          model: llama3.2:1b
+#          temperature: 0.3
+#          top-p: 0.9
+#
+#server:
+#  port: 9095
+#
+#jwt:
+#  secret: smartRestaurantSecretKeyForJWTTokenGenerationAndValidation2024MustBeLongEnough
+#  expiration: 86400000
+#
+#ai:
+#  ollama:
+#    enabled: false
+#
+#
+#spring:
+#  datasource:
+#    url: jdbc:mysql://switchback.proxy.rlwy.net:28781/railway
+#    username: root
+#    password: MnGWRFBXMxMRdYoGLPqoirEWMYLovlKi
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQLDialect
+#    show-sql: true
+#
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: ${MAIL_USERNAME}
+#    password: ${MAIL_PASSWORD}
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#            required: true
+#      transport:
+#        protocol: smtp
+#
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+#
+#  ai:
+#    model:
+#      chat: none
+#    ollama:
+#      base-url: http://localhost:11434
+#      chat:
+#        options:
+#          model: llama3.2:1b
+#          temperature: 0.3
+#          top-p: 0.9
+#
+#server:
+#  port: ${PORT:9095}
+#
+#jwt:
+#  secret: ${JWT_SECRET}
+#  expiration: ${JWT_EXPIRATION:86400000}
+#
+#ai:
+#  ollama:
+#    enabled: false
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://switchback.proxy.rlwy.net:28781/railway
+    username: root
+    password: MnGWRFBXMxMRdYoGLPqoirEWMYLovlKi
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+      transport:
+        protocol: smtp
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  ai:
+    model:
+      chat: none
+    chat:
+      client:
+        enabled: false
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3.2:1b
+          temperature: 0.3
+          top-p: 0.9
+
+server:
+  port: ${PORT:9095}
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION:86400000}
+
+ai:
+  ollama:
+    enabled: false
